@@ -1,0 +1,60 @@
+package com.work.myapp;
+
+import android.content.Intent;
+import android.graphics.Color;
+import android.os.Build;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+    ImageButton main1, main2, main3, main4;
+    View.OnClickListener cl;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        if (Build.VERSION.SDK_INT >= 21) {
+            getWindow().setStatusBarColor(Color.BLACK);
+        }
+        setContentView(R.layout.activity_main);
+
+        main1 = (ImageButton) findViewById(R.id.mainicon_1);
+        main2 = (ImageButton) findViewById(R.id.mainicon_2);
+        main3 = (ImageButton) findViewById(R.id.mainicon_3);
+        main4 = (ImageButton) findViewById(R.id.mainicon_4);
+
+        cl = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                switch ( v.getId() ) {
+                    case R.id.mainicon_1: {
+                        Intent intent = new Intent(MainActivity.this, Map_Acivity.class);
+                        startActivity(intent);
+                    }
+                    break;
+                    case R.id.mainicon_2: {
+                        Toast.makeText(getApplicationContext(), "미구현 기능입니다.", Toast.LENGTH_SHORT).show();
+                    }
+                    break;
+                    case R.id.mainicon_3: {
+                        Toast.makeText(getApplicationContext(), "미구현 기능입니다.", Toast.LENGTH_SHORT).show();
+                    }
+                    break;
+                    case R.id.mainicon_4: {
+                        Toast.makeText(getApplicationContext(), "미구현 기능입니다.", Toast.LENGTH_SHORT).show();
+                    }
+                    break;
+                }
+            }
+        };
+        main1.setOnClickListener(cl);
+        main2.setOnClickListener(cl);
+        main3.setOnClickListener(cl);
+        main4.setOnClickListener(cl);
+    }
+}
