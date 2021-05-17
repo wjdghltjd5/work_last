@@ -2,6 +2,7 @@ package com.work.myapp;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -28,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
         main3 = (ImageButton) findViewById(R.id.mainicon_3);
         main4 = (ImageButton) findViewById(R.id.mainicon_4);
 
+        String url = "daummaps://route? sp="+37.455855+","+126.637208+"&ep="+37.459808+","+126.634375+"&by=FOOT";
+
         cl = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -38,7 +41,8 @@ public class MainActivity extends AppCompatActivity {
                     }
                     break;
                     case R.id.mainicon_2: {
-                        Toast.makeText(getApplicationContext(), "미구현 기능입니다.", Toast.LENGTH_SHORT).show();
+                        Intent intent2 = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                        startActivity(intent2);
                     }
                     break;
                     case R.id.mainicon_3: {

@@ -44,7 +44,7 @@ public class Map_Acivity extends AppCompatActivity implements MapView.CurrentLoc
         mapView = new MapView(this);
         mapView.setPOIItemEventListener(this);
         mapViewContainer.addView(mapView);
-        mapView.setCurrentLocationTrackingMode(MapView.CurrentLocationTrackingMode.TrackingModeOnWithoutHeading);
+        mapView.setCurrentLocationTrackingMode(MapView.CurrentLocationTrackingMode.TrackingModeOnWithHeading);
 
         MapPoint MARKER_POINT = net.daum.mf.map.api.MapPoint.mapPointWithGeoCoord(37.4488, 127.1678);
         MapPOIItem marker = new MapPOIItem();
