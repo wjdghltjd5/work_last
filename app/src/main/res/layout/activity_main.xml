@@ -30,14 +30,14 @@
         <ImageButton
             android:id="@+id/mainicon_1"
             android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_height="170dp"
             android:layout_weight="1"
             android:background="@drawable/mainicon_1" />
 
         <ImageButton
             android:id="@+id/mainicon_2"
             android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_height="170dp"
             android:layout_weight="1"
             android:background="@drawable/mainicon_2" />
 
@@ -54,16 +54,16 @@
         <ImageButton
             android:id="@+id/mainicon_3"
             android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_height="170dp"
             android:layout_weight="1"
             android:background="@drawable/mainicon_3" />
 
         <ImageButton
             android:id="@+id/mainicon_4"
             android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_height="170dp"
             android:layout_weight="1"
-            android:background="@drawable/mainicon_3" />
+            android:background="@drawable/mainicon_4" />
 
     </LinearLayout>
 

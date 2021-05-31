@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                     break;
                     case R.id.mainicon_4: {
-                        Toast.makeText(getApplicationContext(), "미구현 기능입니다.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "미구현 기능", Toast.LENGTH_SHORT).show();
                     }
                     break;
                 }
